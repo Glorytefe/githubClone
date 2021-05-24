@@ -1,0 +1,89 @@
+:root {
+    --navbkColor: #24292e;
+    --whiteCol: white;
+    --navBorderCol: #e1e4e8;
+    --optactiveBord: 2px solid #f9826c;
+    --shadow1: 2px 4px 10px 6px rgba(77, 75, 75, 0.2);
+    --blackCol: black;
+    --rnameBlue: #0366d6;
+    --rnameGrey: #586069;
+    --loginsubmit:#2ea44f;
+    --loginformbkcol:#f6f8fa;
+  }
+  
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  
+/* reusables */
+.container {
+    padding: 20px;
+    width: 100%;
+  }
+  .wrapper {
+    padding: 0 2rem 0 3.2rem;
+  }
+  .darkBlueCol {
+    background-color: var(--navbkColor);
+  }
+  a {
+    text-decoration: none;
+    outline: none;
+  }
+  .white {
+    color: var(--whiteCol);
+  }
+  .black {
+    color: var(--blackCol);
+  }
+  .flex {
+    display: flex;
+    width: 100%;
+  }
+  .aligncent {
+    align-items: center;
+  }
+  .br {
+    border-radius: 5px;
+  }
+  
+  .px5 {
+    padding: 0 8px;
+  }
+  .pl5 {
+    padding-left: 10px;
+  }
+  .pr5 {
+    padding-right: 12px;
+  }
+  .pt5 {
+    padding-top: 10px;
+  }
+  .none {
+    display: none;
+  }
+  .rounded {
+    border-radius: 50%;
+  }
+  .top {
+    border-top: 1px solid var(--navBorderCol);
+  }
+  .ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sard {
+    justify-content: space-around;
+  }
+  .sbtw {
+    justify-content: space-between;
+  }
+  .center {
+    justify-content: center;
+  }
+  .greytext {
+    color: var(--rnameGrey);
+  }
+  
