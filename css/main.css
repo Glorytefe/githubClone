@@ -1,0 +1,373 @@
+/* nav */
+header{
+    font-family:  'Source Sans Pro', sans-serif;
+
+}
+.menulist li {
+  display: inline;
+  padding: 0 10px;
+}
+/* nav form */
+.navform {
+  border: 1px solid var(--rnameGrey);
+  height: 30px;
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.navform input {
+  border: none;
+  outline: none;
+  height: 100%;
+  background-color: inherit;
+  width: 94%;
+  color: var(--whiteCol);
+}
+.navbtn {
+  background-color: inherit;
+  outline: none;
+  height: 21px;
+  border: 1px solid var(--rnameGrey);
+  width: 7%;
+
+}
+.navform input::placeholder {
+  color: var(--whiteCol);
+  font-size: 14px;
+}
+
+.wdth {
+  width: 15px;
+  border: none;
+  background-color: inherit;
+  color: var(--whiteCol);
+}
+.noti-icon *:hover{
+    cursor: pointer;
+    color:rgb(204, 194, 194);
+}
+.notis .bels{
+    font-size: 16px;
+}
+.notis .noti{
+    position: absolute;
+    margin-left: -0.67rem;
+    top: 0.3rem;
+    font-size: 10px;
+    color: var(--rnameBlue);
+}
+.noti-icon .plus{
+    font-size: 25px;
+    padding-left: 2px;
+}
+/* img avatar */
+.avaticon {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 -5px 8px;
+}
+.wdth option {
+  color: var(--blackCol);
+}
+.right {
+  position: absolute;
+  right: 40px;
+}
+/* select elem style */
+select::-ms-expand {
+  display: none;
+}
+select {
+  padding: 0.5em 2em 0.5em 0.5em;
+  border: 1px solid #eee;
+  font: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: right 15px top 1em, right 10px top 1em;
+  background-size: 5px 5px, 5px 5px;
+  outline: none;
+  margin-left: -15px;
+  cursor: pointer;
+}
+/* nav ends */
+
+/* main starts */
+main{
+    background-color: var(--whiteCol);
+    font-family:  'Source Sans Pro', sans-serif;
+
+}
+/* options sect */
+.opts {
+  position: sticky!important;
+  z-index: 2;
+  background-color: var(--whiteCol);
+  top: 0;
+}
+ /* banner border */
+.bord {
+  position: absolute;
+  top: 9rem;
+  width: 100%;
+  left: 0;
+  background-color: var(--navBorderCol);
+  height: 1px;
+  /* z-index: -1; */
+}
+.colgrey {
+  background-color: var(--navBorderCol);
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+.optns > div > a {
+  padding: 0 10px;
+  color: #24292e;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.optns i {
+  color: var(--rnameGrey);
+}
+
+.optns > div > a:focus {
+  font-weight: 900;
+  border-bottom: var(--optactiveBord);
+}
+
+
+
+/* profile */
+.profiless{
+    position: sticky;
+    top: 0;
+    background-color:var(--whiteCol);
+    width: 100%;
+    height: 34px;
+    z-index: 1;
+}
+.uim {
+  flex-direction: column;
+}
+/* profile img */
+.uimg{
+  z-index: 3;
+  margin-top: -2rem;
+
+
+}
+.userImg {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+
+}
+.iconstatus {
+  margin-bottom: -12%;
+  position: absolute;
+  left: 20rem;
+  padding: 0 5px;
+  cursor: pointer;
+
+}
+.iconstat {
+  border: 1px solid var(--navBorderCol);
+  background-color: var(--whiteCol);
+  padding: 10px;
+}
+.iconstatus span {
+  visibility: hidden;
+}
+
+/* repo list styling */
+.cons {
+  padding-top: 3%;
+}
+.repoholder > div {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--navBorderCol);
+}
+/* repo find form */
+.repoform {
+  border: 1px solid var(--navBorderCol);
+  margin-bottom: 15px;
+  padding: 5px;
+}
+.repoform input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+/* repo listing */
+.repodetails {
+  padding: 15px 0;
+}
+.repodetails li {
+  display: inline;
+  padding: 0 15px 0 0;
+}
+.repodetails li i {
+  font-size: 12px;
+}
+.rname {
+  color: var(--rnameBlue);
+  font-weight: 900;
+  font-size: 18px;
+}
+/* star btn */
+.btns {
+  outline: none;
+  border: none;
+  width: 80px;
+  padding: 7px 15px;
+}
+
+@media screen and (max-width: 700px) {
+  .pl5,
+  .px5, .wrapper {
+    padding: 0;
+  }
+ 
+  .avaticon,
+  .pfle {
+    margin: 0;
+  }
+  .flex {
+    display: unset;
+    width: unset;
+  }
+  .none {
+    display: flex;
+  }
+  .flexm {
+    display: flex;
+  }
+  /* nav */
+  .menulist li {
+    display: block;
+    padding: 10px 0;
+    border-top: 1px solid var(--navBorderCol);
+  }
+  .none-m {
+    display: none !important;
+  }
+  .navform {
+    width: 100%;
+    display: flex;
+    margin: 15px auto;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .notis .noti{
+      margin: 0;
+      right: 1.1rem;
+        top: 1.3rem;
+}
+
+ 
+  .mobile {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+ 
+  .topm {
+    border-top: 1px solid var(--navBorderCol);
+  }
+ 
+  /* nav collapse */
+  .collapse {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    background-color: var(--navbkColor);
+    width: 100%;
+    left: 0;
+    padding: 10px 20px;
+  }
+  .top {
+    border: none;
+  }
+/* profile div */
+  .uim {
+    flex-direction: row;
+    align-items: center;
+  }
+  .userImg {
+    margin-right: 15px;
+    width: 4rem;
+    height: 4rem;
+    margin-top: 0;
+  }
+
+  .profiles {
+    padding: 10px 0 0 10px;
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  /* option */
+  .optns {
+    padding-top: 5px;
+    padding-bottom: 13px;
+    overflow-y: hidden;
+    overflow-x: auto;
+  border-bottom: 1px solid var(--navBorderCol);
+
+
+  }
+  .opts{
+     padding:0!important; 
+  }
+/* repo */
+  .repodetails {
+    font-size: 12px;
+  }
+.repos p{
+    width: 200px;
+}
+  .btns {
+    width: 60px;
+    padding: 7px 0;
+  }
+  .descr {
+    padding: 5px 10px;
+  }
+}
+/* media for tablet */
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .wrapper, .pl5 {
+    padding: 0;
+  }
+  .right {
+    right: 5px;
+  }
+  .optns {
+    font-size: 14px;
+  }
+  .userImg {
+    width: 12rem;
+    height: 12rem;
+  }
+  .iconstatus {
+    left: 11rem;
+  }
+ .cons{
+     padding-top: 5%;
+ }
+  .optns .pr5 {
+    padding-right: 5px;
+  }
+  nav{
+      font-size: 15px;
+  }
+}
