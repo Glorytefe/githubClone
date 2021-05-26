@@ -1,9 +1,10 @@
+import mytoken from "./apikey.js";
 const params = new URLSearchParams(window.location.search);
 let userName = params.get("usern");
 let profile;
 let repoDetails;
 
-const mytoken = "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";
+// const mytoken = "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";
 const url = "https://api.github.com/graphql";
 const queryData = {
   query: `
@@ -59,8 +60,6 @@ class getData {
           };
           // All repo and details
           repoDetails = data.repositories.nodes;
-
-          console.log(profile, repoDetails);
         })
         .then(() => {
           const displayUi = new UI();
@@ -72,20 +71,22 @@ class getData {
 
 class UI {
   constructor() {
-    this.pImg = document.getElementById("profileImg");
+    this.pImg = document.querySelectorAll("[id = 'profileImg']");
     this.pName = document.getElementById("profileName");
     this.pUName = document.getElementById("profileUName");
+    this.pUNameMo = document.getElementById("profileUNama");
     this.pDescr = document.getElementById("descr");
     this.aElem = document.getElementById("rname");
     this.rDescription = document.getElementById("rDescrp");
     // this.rContainer = document.getElementById('repoCarrier')
     this.rContainer = document.getElementById("repoCar");
-    // this.rContainer = document.getElementById('repoCarrier')
-    // this.rContainer = document.getElementById('repoCarrier')
   }
   displayProf() {
-    this.pImg.setAttribute("src", profile.img);
+    this.pImg.forEach((img) => {
+      img.setAttribute("src", profile.img);
+    });
     this.pUName.innerText = profile.username;
+    this.pUNameMo.innerText = profile.username;
     this.pDescr.innerText = profile.bio;
     if (this.pName !== null) {
       this.pName.innerText = profile.name;
@@ -100,6 +101,13 @@ class UI {
     // let repoDescr;
     if (repoDetails.length > 0) {
       repoDetails.forEach((repository) => {
+        function truncator(str, num) {
+          if (str.length <= num) {
+            return str;
+          }
+
+          return str.slice(0, num) + "...";
+        }
         // repo name and url
         let repoName =
           repository.name === null
@@ -109,7 +117,10 @@ class UI {
         let repoDescr =
           repository.description === null
             ? ""
-            : `<p class="greytext pt5" id="rDescrp">${repository.description}</p>`;
+            : `<p class="greytext pt5" id="rDescrp">${truncator(
+                repository.description,
+                197
+              )}</p>`;
         //  repo lang
         let repoL = repository.primaryLanguage;
         let repolang =
@@ -117,16 +128,29 @@ class UI {
             ? ""
             : `<li class="pr5" ><i class="fas fa-circle" style = "color:  ${repoL.color}"></i>&nbsp;<span class="greytext">${repoL.name}</span></li>`;
         // repo stars
-        let repoStar = (repository.stargazerCount === 0) ? "": (` <li class="greytext pr5">
+        let repoStar =
+          repository.stargazerCount === 0
+            ? ""
+            : ` <li class="greytext pr5">
         <a href="#" class="greytext"><i class="far fa-star"></i>&nbsp;<span >${repository.stargazerCount}</span></a>
-        </li>`) 
+        </li>`;
         // repo forks
-        let repoForks = (repository.forkCount === 0) ? "" : (`<li class="pr5">
+        let repoForks =
+          repository.forkCount === 0
+            ? ""
+            : `<li class="pr5">
         <a href="#" class="greytext"><i class="fas fa-code-branch"></i>&nbsp;<span
         >${repository.forkCount}</span></a>
-        </li >`) 
+        </li >`;
         // call method
-        this.repoUI(repoDetailsa, repoName, repoDescr, repolang, repoStar, repoForks);
+        this.repoUI(
+          repoDetailsa,
+          repoName,
+          repoDescr,
+          repolang,
+          repoStar,
+          repoForks
+        );
       });
     }
   }
@@ -149,7 +173,7 @@ class UI {
         <!-- codebranch fork -->
         ${repoForks}
         <!-- update -->
-        <li id="li4" class="greytext">updated 2 days ago</li>
+        <li id="li4">updated 2 days ago</li>
         </ul>
         </div>
         <!-- star btn -->
