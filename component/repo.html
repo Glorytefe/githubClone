@@ -82,10 +82,6 @@
         <div class="bord none-m" id="bord"> </div>
 
         <div class="wrapper">
-            <div class="c">
-        <!-- <div class="bord none-m" id="bord"> </div> -->
-
-            </div>
             <!-- main content starts -->
             <div class="flex container" id="repol">
                 <!-- col a -->
@@ -95,24 +91,24 @@
                     <div class="flex flexm uim">
                         <!-- img avatar -->
                         <div class="flex aligncent pt5 uimg">
-                            <img src="/avat.jpg" class="rounded userImg" alt="Profile Picture" />
+                            <img class="rounded userImg" alt="Profile Picture" id="profileImg" />
                             <div class="iconstatus none-m greytext">
                                 <i class="far fa-smile iconstat rounded"></i>
                                 <!-- <span>set status</span> -->
                             </div>
                         </div>
 
-                        <div>
+                        <div class="details">
                             <!-- display name -->
-                            <h2>Glory Tefe</h2>
+                            <h2 id="profileName"></h2>
                             <!-- username -->
-                            <h5 class="greytext uname pt5">@glorytefe</h5>
+                            <h3 class="greytext" id="profileUName" ></h3>
                         </div>
                     </div>
                     <div>
                         <!-- user descr -->
-                        <p class="pt5 descr">
-                            Lorem ipsum dolor sit amet. and Lorem, ipsum dolor.
+                        <p class="pt5 descr" id="descr" >
+                            
                         </p>
                     </div>
                 </div>
@@ -148,383 +144,12 @@
                             <form action="/" class="repoform br">
                                 <input type="text" placeholder="Find a repository..." />
                             </form>
-                            <!-- <div class="top">
-                  <p><b>124 results for public repo</b></p>
-  
-                  </div> -->
                             <!-- holds all repo list -->
-                            <div class="repoholder topm">
+                            <div class="repoholder topm" id="repoCar">
                                 <!-- repo 1 -->
-                                <div class="repos flex flexm aligncent sbtw top">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- repo 1 ends -->
-                                <!-- repo 2 -->
-                                <div class="repos flex flexm aligncent sbtw">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
+                                
                             </div>
-                            <div class="repoholder topm">
-                                <!-- repo 1 -->
-                                <div class="repos flex flexm aligncent sbtw top">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- repo 1 ends -->
-                                <!-- repo 2 -->
-                                <div class="repos flex flexm aligncent sbtw">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="repoholder topm">
-                                <!-- repo 1 -->
-                                <div class="repos flex flexm aligncent sbtw top">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- repo 1 ends -->
-                                 <!-- repo 1 -->
-                                 <div class="repos flex flexm aligncent sbtw top">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- repo 1 ends -->
-                                 <!-- repo 1 -->
-                                 <div class="repos flex flexm aligncent sbtw top">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- repo 1 ends -->
-                                 <!-- repo 1 -->
-                                 <div class="repos flex flexm aligncent sbtw top">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- repo 1 ends -->
-                                 <!-- repo 1 -->
-                                 <div class="repos flex flexm aligncent sbtw top">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- repo 2 -->
-                                <div class="repos flex flexm aligncent sbtw">
-                                    <div>
-                                        <!-- repo name -->
-                                        <a href="#" class="rname">Lorem, ipsum dolor.</a>
-                                        <!-- repo descr -->
-                                        <p class="greytext pt5">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                        <!-- repo details -->
-                                        <ul class="ul repodetails">
-                                            <!--  -->
-                                            <li>
-                                                <i class="fas fa-circle"></i>&nbsp;<span class="greytext">HTML</span>
-                                            </li>
-                                            <!-- star -->
-                                            <li>
-                                                <a href="#"><i class="far fa-star"></i>&nbsp;<span
-                                                        class="greytext">9</span></a>
-                                            </li>
-                                            <!-- codebranch fork -->
-                                            <li>
-                                                <a href="#"><i class="fas fa-code-branch"></i>&nbsp;<span
-                                                        class="greytext">10</span></a>
-                                            </li>
-                                            <!-- update -->
-                                            <li>updated 2 days ago</li>
-                                        </ul>
-                                    </div>
-                                    <!-- star btn -->
-                                    <div>
-                                        <button class="br btns">
-                                            <i class="far fa-star"></i> star
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -532,6 +157,9 @@
         </div>
     </main>
     <!-- scripts -->
-    <script src="./script/index.js"></script>
+    <script src="../script/index.js"></script>
+    <script src="../script/nav.js"></script>
+    <!-- <script src="../script/login.js"></script> -->
+
 </body>
 </html>
