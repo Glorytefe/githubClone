@@ -1,4 +1,4 @@
-import mytoken from "./apikey.js";
+import mytoken from "./test.js";
 const params = new URLSearchParams(window.location.search);
 let userName = params.get("usern");
 let profile;
