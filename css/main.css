@@ -153,9 +153,24 @@ main{
     height: 34px;
     z-index: 1;
 }
+.details{
+  padding: 20px 0 8px 0;
+}
+.details h2{
+  font-size: 28px;
+}
+.details h3 {
+  font-size: 20px ;
+  font-weight: 300;
+}
+.details p{
+  font-size: 20px;
+  font-weight: 400;
+}
 .uim {
   flex-direction: column;
 }
+
 /* profile img */
 .uimg{
   z-index: 3;
@@ -198,7 +213,7 @@ main{
 .repoform {
   border: 1px solid var(--navBorderCol);
   margin-bottom: 15px;
-  padding: 5px;
+  padding: 7px 10px;
 }
 .repoform input {
   width: 100%;
@@ -210,9 +225,14 @@ main{
 .repodetails {
   padding: 15px 0;
 }
+#rDescrp{
+  max-width: 500px;
+  width: 100%;
+}
 .repodetails li {
   display: inline;
-  padding: 0 15px 0 0;
+  font-size: 14px;
+  /* padding: 0 15px 0 0; */
 }
 .repodetails li i {
   font-size: 12px;
@@ -220,7 +240,11 @@ main{
 .rname {
   color: var(--rnameBlue);
   font-weight: 900;
-  font-size: 18px;
+  font-size: 20px;
+}
+#rDescrp{
+  font-size: 15px;
+  line-height: 20px;
 }
 /* star btn */
 .btns {
@@ -228,6 +252,7 @@ main{
   border: none;
   width: 80px;
   padding: 7px 15px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 700px) {

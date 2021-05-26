@@ -18,7 +18,7 @@
     <body>
         <main>
             <!-- container -->
-            <div class="container flex center contentlogin">
+            <div class="container flex center contentlogin aligncent">
                 <div class="contentlogina">
                     <!-- logo div -->
                     <div class="div1">
@@ -32,19 +32,13 @@
                     <!-- form container -->
                     <div class="form-container container br">
                         <!-- form -->
-                        <form action="/">
+                        <form id="loginFm">
                             <!-- username -->
                             <div>
-                                <p>Username or email address</p>
-                                <input type="email" name="email" id="email">
+                                <p>GitHub Username</p>
+                                <input type="text" name="usern" id="usern" required>
                             </div>
-                            <!-- passworf -->
-                            <div>
-                                <p>Password
-                                    <small class="forgot"><a href="#">Forgot Password?</a></small>
-                                </p>
-                                <input type="password" name="pword" id="pword">
-                            </div>
+                           
                             <!-- submit -->
                             <div>
                                 <input type="submit" value="Sign in" id="submit">
@@ -71,6 +65,10 @@
                 </div>
             </div>
         </main>
+        <!-- script -->
+    <!-- <script src="./script/index.js"></script> -->
+
+    <script src="./script/login.js"></script>
     </body>
 
     </html>
