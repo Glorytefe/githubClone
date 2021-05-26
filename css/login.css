@@ -63,3 +63,30 @@ a {
     text-decoration: underline;
   }
   
+  .err{
+    text-align: center;
+    /* font-size: 200px; */
+  }
+
+  .err h1{
+    font-size: 100px;
+  }
+  .err h5, .err h6{
+  font-size: 20px;
+  }
+  .err h1:hover{
+    color: var(--rnameBlue);
+  }
+  .errbtn{
+    margin: 40px ;
+  }
+  .errbtn button{
+    width: 100px;
+    background-color: var(--rnameGrey);
+    height: 40px;
+    cursor: pointer;
+    border: none;
+  }
+  .errbtn button:hover{
+    background-color: var(--rnameBlue);
+  }

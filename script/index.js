@@ -51,25 +51,30 @@ class getData {
         body: JSON.stringify(queryData),
       })
         .then((response) => response.json())
+        // console.log(response.j)
         .then((result) => {
-          const data = result.data.user;
-          // profile content
-          profile = {
-            name: data.name,
-            img: data.avatarUrl,
-            bio: data.bio,
-            username: data.login,
-            total: data.repositories.totalCount,
-          };
-          // All repo and details
-          repoDetails = data.repositories.nodes;
+          
+          this.myData(result)
+      
         })
-        .then(() => {
-          const displayUi = new UI();
-          displayUi.displayProf();
-        });
     }
   }
+   myData (result){
+    const data = (result.data.user === null || result.data.user.repositories.totalCount === 0)?
+    window.location.href = "../component/error.html":result.data.user;
+    // profile content
+    profile = {
+      name: data.name,
+      img: data.avatarUrl,
+      bio: data.bio,
+      username: data.login,
+      total: data.repositories.totalCount,
+    };
+    // All repo and details
+    repoDetails = data.repositories.nodes;
+    const displayUi = new UI();
+    displayUi.displayProf();
+   }
 }
 
 class UI {
