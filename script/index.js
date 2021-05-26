@@ -1,11 +1,9 @@
-// import mytoken from "./apikey.js";
 const params = new URLSearchParams(window.location.search);
 let userName = params.get("usern");
 let profile;
 let repoDetails;
 const encodedString = "Z2hwX1ZtM3R5NGNTdnFiUHlhUkM2T1dFSlZKTUlDMWRVZDBwWUtNdA==";
 const mytoken = window.atob(encodedString);
-// const mytoken = "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";
 const url = "https://api.github.com/graphql";
 const queryData = {
   query: `
