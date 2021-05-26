@@ -1,4 +1,5 @@
-import mytoken from "./test.js";
+// import mytoken from "./test.js";
+const mytoken = "const apiKey = "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"
 const params = new URLSearchParams(window.location.search);
 let userName = params.get("usern");
 let profile;
