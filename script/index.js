@@ -1,9 +1,10 @@
+
+const encodedString = "Z2hwX1ZtM3R5NGNTdnFiUHlhUkM2T1dFSlZKTUlDMWRVZDBwWUtNdA==";
+const mytoken = window.atob(encodedString);
 const params = new URLSearchParams(window.location.search);
 let userName = params.get("usern");
 let profile;
 let repoDetails;
-const encodedString = "Z2hwX1ZtM3R5NGNTdnFiUHlhUkM2T1dFSlZKTUlDMWRVZDBwWUtNdA==";
-const mytoken = window.atob(encodedString);
 const url = "https://api.github.com/graphql";
 const queryData = {
   query: `
