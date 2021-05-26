@@ -5,7 +5,8 @@ const params = new URLSearchParams(window.location.search);
 let userName = params.get("usern");
 let profile;
 let repoDetails;
-const url = "https://api.github.com/graphql";
+const url = "https://api.github.com/graphql"
+
 const queryData = {
   query: `
            query{
@@ -15,6 +16,7 @@ const queryData = {
                    bio
                    avatarUrl
                    repositories(first: 20, orderBy: {field: PUSHED_AT, direction: DESC}) {
+                    totalCount
                      nodes {
                        name
                        url
@@ -57,6 +59,7 @@ class getData {
             img: data.avatarUrl,
             bio: data.bio,
             username: data.login,
+            total: data.repositories.totalCount,
           };
           // All repo and details
           repoDetails = data.repositories.nodes;
@@ -78,9 +81,24 @@ class UI {
     this.pDescr = document.getElementById("descr");
     this.aElem = document.getElementById("rname");
     this.rDescription = document.getElementById("rDescrp");
-    // this.rContainer = document.getElementById('repoCarrier')
+    this.rCounter = document.getElementById("tcount");
     this.rContainer = document.getElementById("repoCar");
+    this.allMonths = [
+      "jan",
+      "feb",
+      "mar",
+      "apr",
+      "may",
+      "jun",
+      "jul",
+      "aug",
+      "sep",
+      "oct",
+      "nov",
+      "dec",
+    ];
   }
+  // display profile
   displayProf() {
     this.pImg.forEach((img) => {
       img.setAttribute("src", profile.img);
@@ -88,26 +106,17 @@ class UI {
     this.pUName.innerText = profile.username;
     this.pUNameMo.innerText = profile.username;
     this.pDescr.innerText = profile.bio;
+    this.rCounter.innerText = profile.total;
     if (this.pName !== null) {
       this.pName.innerText = profile.name;
     }
-    // display repos
-
+    // display repos list
     this.displayRepo();
   }
 
   displayRepo() {
-    let repoDetailsa;
-    // let repoDescr;
     if (repoDetails.length > 0) {
       repoDetails.forEach((repository) => {
-        function truncator(str, num) {
-          if (str.length <= num) {
-            return str;
-          }
-
-          return str.slice(0, num) + "...";
-        }
         // repo name and url
         let repoName =
           repository.name === null
@@ -117,7 +126,7 @@ class UI {
         let repoDescr =
           repository.description === null
             ? ""
-            : `<p class="greytext pt5" id="rDescrp">${truncator(
+            : `<p class="greytext pt5" id="rDescrp">${this.truncator(
                 repository.description,
                 197
               )}</p>`;
@@ -142,41 +151,40 @@ class UI {
         <a href="#" class="greytext"><i class="fas fa-code-branch"></i>&nbsp;<span
         >${repository.forkCount}</span></a>
         </li >`;
-        // call method
+
+        // updated date
+        let updated =
+          repository.pushedAt === null
+            ? ""
+            : `<li id="li4" class="greytext pr5">${this.getNewDateFormat(
+                repository.pushedAt
+              )}</li>`;
+        // call ui building method
         this.repoUI(
-          repoDetailsa,
           repoName,
           repoDescr,
           repolang,
           repoStar,
-          repoForks
+          repoForks,
+          updated
         );
       });
     }
   }
-  // <a href=${repository.url} class="rname">${repository.name}</a>
-
-  repoUI(repoDetailsa, repoName, repoDescr, repolang, repoStar, repoForks) {
-    repoDetailsa = `
+  // repo UI Builder
+  repoUI(repoName, repoDescr, repolang, repoStar, repoForks, updated) {
+    let repoDetailsa = `
     <div class="repos flex flexm aligncent sbtw">
     <div id="repoCarrier">
-         <!-- repo name -->
         ${repoName}
-        <!-- repo descr -->
         ${repoDescr}
-        <!-- repo details -->
          <ul class="ul repodetails">
-         <!-- repo langauge -->
          ${repolang}
-        <!-- star -->
         ${repoStar}
-        <!-- codebranch fork -->
         ${repoForks}
-        <!-- update -->
-        <li id="li4">updated 2 days ago</li>
+        ${updated}
         </ul>
         </div>
-        <!-- star btn -->
         <div>
         <button class="br btns">
        <i class="far fa-star"></i> star
@@ -184,6 +192,20 @@ class UI {
        </div>
        `;
     this.rContainer.innerHTML += repoDetailsa;
+  }
+  // truncate description text if too long
+  truncator(str, num) {
+    return str.length <= num ? str : str.slice(0, num) + "...";
+  }
+
+  // Date updated
+  getNewDateFormat(updated) {
+    const newDate = new Date(updated);
+    // let date = newDate.getDate();
+    let month = this.allMonths[newDate.getMonth()];
+    let year = newDate.getFullYear();
+
+    return `last updated ${month}, ${year}`;
   }
 }
 // on load
