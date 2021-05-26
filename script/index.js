@@ -1,9 +1,10 @@
 const params = new URLSearchParams(window.location.search);
-let userName = params.get("usern");
+// let userName = params.get("usern");
+let userName = "Glorytefe"
 let profile;
 let repoDetails;
 
-const mytoken = "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";
+const mytoken = "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";
 const url = "https://api.github.com/graphql";
 const queryData = {
   query: `
@@ -49,6 +50,7 @@ class getData {
       })
         .then((response) => response.json())
         .then((result) => {
+          console.log(result);
           const data = result.data.user;
           // profile content
           profile = {
@@ -121,7 +123,7 @@ class UI {
         <a href="#" class="greytext"><i class="far fa-star"></i>&nbsp;<span >${repository.stargazerCount}</span></a>
         </li>`) 
         // repo forks
-        let repoForks = (repository.forkCount === 0) ? "" : (`<li class="pr5">
+        let repoForks = (repository.forkCount) ? "" : (`<li class="pr5">
         <a href="#" class="greytext"><i class="fas fa-code-branch"></i>&nbsp;<span
         >${repository.forkCount}</span></a>
         </li >`) 
@@ -149,7 +151,7 @@ class UI {
         <!-- codebranch fork -->
         ${repoForks}
         <!-- update -->
-        <li id="li4" class="greytext">updated 2 days ago</li>
+        <li id="li4">updated 2 days ago</li>
         </ul>
         </div>
         <!-- star btn -->
