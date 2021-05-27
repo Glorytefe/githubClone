@@ -13,7 +13,7 @@ A Github clone that displays the repositories of a user.
 # Pages
 
 * A page containing an input field that accepts username
-* A page that displays data fetched from GitHub graphql Api using the submitted api
+* A page that displays data fetched from GitHub graphql Api using the submitted username
 * An error page, where the submitted username has no data
 
 # GitHub graphql Api
