@@ -1,6 +1,6 @@
 /* nav */
 header {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .menulist li {
   display: inline;
@@ -99,7 +99,7 @@ select {
 /* main starts */
 main {
   background-color: var(--whiteCol);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 /* options sect */
 .opts {
@@ -111,7 +111,7 @@ main {
 /* banner border */
 .bord {
   position: absolute;
-  top: 9.1rem;
+  top: 10.1rem;
   width: 100%;
   left: 0;
   background-color: var(--navBorderCol);
@@ -124,7 +124,7 @@ main {
   border-radius: 10px;
   margin: 0 5px;
 }
-.optns div{
+.optns div {
   padding: 8px;
   margin-right: 24px;
 }
@@ -141,9 +141,9 @@ main {
   border-bottom: var(--optactiveBord);
 }
 
-.repoholder a:hover{
+.repoholder a:hover {
   text-decoration: underline;
-} 
+}
 /* profile */
 .profiless {
   position: sticky;
@@ -155,7 +155,7 @@ main {
   padding: 5px 0;
   visibility: hidden;
 }
-.profiless span{
+.profiless span {
   font-size: 12px;
   padding-left: 4px;
 }
@@ -173,7 +173,8 @@ main {
   font-size: 20px;
   font-weight: 400;
 }
-.uim, .pld {
+.uim,
+.pld {
   flex-direction: column;
 }
 
@@ -212,7 +213,7 @@ main {
   animation: ease-in 2s linear 2s;
   visibility: hidden;
 }
-.iconstatus i:hover ~ .iconstatuss{
+.iconstatus i:hover ~ .iconstatuss {
   visibility: visible;
   animation: ease-out 2s linear 0.2s;
 }
@@ -250,7 +251,7 @@ main {
   font-size: 14px;
   font-weight: 200;
 }
-.repodetails p{
+.repodetails p {
   font-weight: 100;
   letter-spacing: 1;
 }
@@ -274,7 +275,7 @@ main {
   padding: 7px 15px;
   cursor: pointer;
 }
-#contentsm{
+#contentsm {
   display: none;
 }
 
@@ -331,7 +332,6 @@ main {
   .topm {
     border-top: 1px solid var(--navBorderCol);
   }
- 
 
   /* nav collapse */
   .collapse {
@@ -358,7 +358,7 @@ main {
     height: 4rem;
     margin: 0 auto;
   }
-  
+
   .profiles {
     padding: 10px 0 0 10px;
     font-size: 15px;
@@ -376,15 +376,13 @@ main {
     padding: 0 !important;
     border-bottom: 1px solid var(--navBorderCol);
     font-size: 14px;
-
   }
-  .optns div{
-   margin-right: 15px;
-
+  .optns div {
+    margin-right: 15px;
   }
-.details{
-  padding: 0 0 10px 10px;
-}
+  .details {
+    padding: 0 0 10px 10px;
+  }
 
   .details h3 {
     padding: 10px 0;
@@ -439,10 +437,10 @@ main {
   nav {
     font-size: 15px;
   }
-  .optns{
+  .optns {
     width: 100%;
   }
-  .optns div{
+  .optns div {
     padding: 4px 0;
     margin-right: 18px;
   }
