@@ -13,6 +13,10 @@ a {
   text-align: center;
   padding: 12px 0 18px 0;
 }
+.logob svg {
+  fill: var(--blackCol);
+  font-size: 50px;
+}
 .div1 h5 {
   color: var(--rnameGrey);
   font-weight: 300;
@@ -25,9 +29,9 @@ a {
   border: 1px solid var(--navBorderCol);
 }
 form input {
-  width: 260px;
+  width: 300px;
   padding: 0 10px;
-  height: 30px;
+  height: 45px;
   margin: 10px 0;
   border-radius: 8px;
   outline-color: #adccf0;
@@ -88,4 +92,14 @@ form input {
 }
 .errbtn button:hover {
   background-color: var(--rnameBlue);
+}
+.logob svg:hover {
+  fill: var(--rnameBlue);
+}
+
+@media screen and (max-width: 767px) {
+  form input {
+    max-width: 300px;
+    width: 100%;
+  }
 }
