@@ -146,3 +146,7 @@ a {
   height: 1px;
   z-index: 3;
 }
+.out svg{
+  font-size: 20px;
+  padding-right: 5px;
+}

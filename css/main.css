@@ -1,6 +1,7 @@
 /* nav */
 header {
   font-family: "Source Sans Pro", sans-serif;
+  color: white!important;
 }
 .menulist li {
   display: inline;
@@ -273,6 +274,11 @@ main {
 .rname:hover {
   text-decoration: underline !important;
 }
+.repos .hv:hover{
+fill: var(--rnameBlue);
+ stroke: var(--rnameBlue);
+ color: var(--rnameBlue)!important;
+}
 #rDescrp {
   font-size: 15px;
   line-height: 20px;
@@ -287,7 +293,6 @@ main {
 }
 .star {
   font-size: 18px;
-  text-align: center;
   fill: grey;
 }
 .btns .star {
