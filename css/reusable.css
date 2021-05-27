@@ -2,7 +2,7 @@
   --navbkColor: #24292e;
   --whiteCol: white;
   --navBorderCol: #e1e4e8;
-  --optactiveBord: 2px solid #f9826c;
+  --optactiveBord: 3px solid #f9826c;
   --shadow1: 2px 4px 10px 6px rgba(77, 75, 75, 0.2);
   --blackCol: black;
   --rnameBlue: #0366d6;
@@ -84,4 +84,48 @@ a {
 }
 .greytext {
   color: var(--rnameGrey);
+}
+.height {
+  height: 80vh;
+  cursor: pointer;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+}
+.loader {
+  border: 16px solid var(--navBorderCol);
+  border-radius: 50%;
+  border-top: 16px solid var(--navbkColor);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader:hover {
+  border: 16px solid var(--navBorderCol);
+  border-top: 16px solid var(--rnameBlue);
+}
+
+.dhover:hover {
+  color: var(--rnameBlue);
 }
