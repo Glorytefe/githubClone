@@ -87,6 +87,7 @@ class UI {
     this.rContainer = document.getElementById("repoCar");
     this.preload = document.getElementById("preload");
     this.mycont= document.getElementById("contentsm");
+    this.title = document.getElementById('title');
 
 
     this.allMonths = [
@@ -108,6 +109,7 @@ class UI {
   displayProf() {
     this.preload.style.display = "none";
     this.mycont.style.display = "block";
+    this.title.innerText = `${userName}/repositories`
     this.pImg.forEach((img) => {
       img.setAttribute("src", profile.img);
     });
@@ -142,13 +144,18 @@ class UI {
         let repolang =
           repoL === null
             ? ""
-            : `<li class="pr5" ><i class="fas fa-circle" style = "color:  ${repoL.color}"></i>&nbsp;<span class="greytext">${repoL.name}</span></li>`;
+            : `<li class="pr5" >
+            <svg xmlns="http://www.w3.org/2000/svg"  width="1em" height="1em" viewBox="0 0 24 24"><g fill=${repoL.color}><circle cx="12" cy="12" r="9"stroke-width="2"/></g></svg>
+            &nbsp;<span class="greytext">${repoL.name}</span></li>`;
         // repo stars
         let repoStar =
           repository.stargazerCount === 0
             ? ""
-            : ` <li class="greytext pr5">
-        <a href="#" class="greytext"><i class="far fa-star"></i>&nbsp;<span >${repository.stargazerCount}</span></a>
+            : ` <li class="greytext pr5 flexm flex aligncent">
+        <a href="#" class="greytext">
+      <svg xmlns="http://www.w3.org/2000/svg" class="star" width="1em" height="1em" viewBox="0 0 32 32" fill="#586069"><path d="M16 6.52l2.76 5.58l.46 1l1 .15l6.16.89l-4.38 4.3l-.75.73l.18 1l1.05 6.13l-5.51-2.89L16 23l-.93.49l-5.51 2.85l1-6.13l.18-1l-.74-.77l-4.42-4.35l6.16-.89l1-.15l.46-1L16 6.52M16 2l-4.55 9.22l-10.17 1.47l7.36 7.18L6.9 30l9.1-4.78L25.1 30l-1.74-10.13l7.36-7.17l-10.17-1.48z" /></svg>
+       
+        &nbsp;<span >${repository.stargazerCount}</span></a>
         </li>`;
         // repo forks
         let repoForks =
@@ -196,8 +203,10 @@ class UI {
         </ul>
         </div>
         <div>
-        <button class="br btns">
-       <i class="far fa-star"></i> star
+        <button class="br btns aligncent flex flexm">
+<svg xmlns="http://www.w3.org/2000/svg" class="star" width="1em" height="1em"  viewBox="0 0 32 32" stroke="grey"><path d="M16 6.52l2.76 5.58l.46 1l1 .15l6.16.89l-4.38 4.3l-.75.73l.18 1l1.05 6.13l-5.51-2.89L16 23l-.93.49l-5.51 2.85l1-6.13l.18-1l-.74-.77l-4.42-4.35l6.16-.89l1-.15l.46-1L16 6.52M16 2l-4.55 9.22l-10.17 1.47l7.36 7.18L6.9 30l9.1-4.78L25.1 30l-1.74-10.13l7.36-7.17l-10.17-1.48z" /></svg>
+       
+        Star
       </button>
        </div>
        `;

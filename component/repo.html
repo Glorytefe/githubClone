@@ -8,35 +8,80 @@
     <link rel="stylesheet" href="../css/reusable.css" />
     <!-- custom css -->
     <link rel="stylesheet" href="../css/main.css" />
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-     
-  
+
     <!-- favicon -->
     <link rel="icon" href="../asset/favicon.png" type="image/png" />
-    <title>GitHub</title>
+    <title id="title">GitHub</title>
   </head>
   <body>
     <section id="contentsm">
-        <!-- header -->
-    <header class="container darkBlueCol">
+      <!-- header -->
+      <header class="container darkBlueCol">
         <nav class="nav flex aligncent">
           <div class="mobile flexm">
-            <span class="none notis"
-              ><i class="far fa-bell white bels"></i>
-              <i class="fas fa-circle noti"></i
-            ></span>
+            <span class="none notis">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="bels"
+                width="1em"
+                height="1em"
+                viewBox="0 0 36 36"
+              >
+                <path
+                  class="clr-i-outline clr-i-outline-path-1"
+                  d="M32.51 27.83A14.4 14.4 0 0 1 30 24.9a12.63 12.63 0 0 1-1.35-4.81v-4.94A10.81 10.81 0 0 0 19.21 4.4V3.11a1.33 1.33 0 1 0-2.67 0v1.31a10.81 10.81 0 0 0-9.33 10.73v4.94a12.63 12.63 0 0 1-1.35 4.81a14.4 14.4 0 0 1-2.47 2.93a1 1 0 0 0-.34.75v1.36a1 1 0 0 0 1 1h27.8a1 1 0 0 0 1-1v-1.36a1 1 0 0 0-.34-.75zM5.13 28.94a16.17 16.17 0 0 0 2.44-3a14.24 14.24 0 0 0 1.65-5.85v-4.94a8.74 8.74 0 1 1 17.47 0v4.94a14.24 14.24 0 0 0 1.65 5.85a16.17 16.17 0 0 0 2.44 3z"
+                />
+                <path
+                  class="clr-i-outline clr-i-outline-path-2"
+                  d="M18 34.28A2.67 2.67 0 0 0 20.58 32h-5.26A2.67 2.67 0 0 0 18 34.28z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="noti"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g fill="#0366d6">
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="#0366d6"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+            </span>
             <!-- logo -->
-            <a href="#" class="logo white"
-              ><i class="fab fa-github fa-2x px5"></i
-            ></a>
+            <a href="#" class="logo white pr5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="0.97em"
+                height="1em"
+                viewBox="0 0 496 512"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6c-3.3.3-5.6-1.3-5.6-3.6c0-2 2.3-3.6 5.2-3.6c3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9c2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9c.3 2 2.9 3.3 5.9 2.6c2.9-.7 4.9-2.6 4.6-4.6c-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.7c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.7 5.2 61.4 2.6 67.9c16 17.7 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.7-.3 75.4-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2c1.6 1.6 3.9 2.3 5.2 1c1.3-1 1-3.3-.7-5.2c-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9c1.6 1 3.6.7 4.3-.7c.7-1.3-.3-2.9-2.3-3.9c-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2c2.3 2.3 5.2 2.6 6.5 1c1.3-1.3.7-4.3-1.3-6.2c-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9c1.6 2.3 4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2c-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
             <!-- menu bar -->
-            <span class="none white" id="barmenu"
-              ><i class="fas fa-bars"></i
-            ></span>
+            <span class="none white" id="barmenu">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <rect x="3" y="11" width="18" height="2" rx=".95" ry=".95" />
+                  <rect x="3" y="16" width="18" height="2" rx=".95" ry=".95" />
+                  <rect x="3" y="6" width="18" height="2" rx=".95" ry=".95" />
+                </g>
+              </svg>
+            </span>
           </div>
           <!-- collapse menu -->
           <div class="collapse flex aligncent" id="collapse">
@@ -72,42 +117,85 @@
             <!-- nav icons and dropdown -->
             <div class="noti-icon right none-m">
               <!-- bell icon -->
-              <span class="pr5 notis"
-                ><i class="far fa-bell white bels"></i>
-                <i class="fas fa-circle noti"></i
-              ></span>
+              <span class="pr5 notis">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="bels"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 36 36"
+                >
+                  <path
+                    class="clr-i-outline clr-i-outline-path-1"
+                    d="M32.51 27.83A14.4 14.4 0 0 1 30 24.9a12.63 12.63 0 0 1-1.35-4.81v-4.94A10.81 10.81 0 0 0 19.21 4.4V3.11a1.33 1.33 0 1 0-2.67 0v1.31a10.81 10.81 0 0 0-9.33 10.73v4.94a12.63 12.63 0 0 1-1.35 4.81a14.4 14.4 0 0 1-2.47 2.93a1 1 0 0 0-.34.75v1.36a1 1 0 0 0 1 1h27.8a1 1 0 0 0 1-1v-1.36a1 1 0 0 0-.34-.75zM5.13 28.94a16.17 16.17 0 0 0 2.44-3a14.24 14.24 0 0 0 1.65-5.85v-4.94a8.74 8.74 0 1 1 17.47 0v4.94a14.24 14.24 0 0 0 1.65 5.85a16.17 16.17 0 0 0 2.44 3z"
+                  />
+                  <path
+                    class="clr-i-outline clr-i-outline-path-2"
+                    d="M18 34.28A2.67 2.67 0 0 0 20.58 32h-5.26A2.67 2.67 0 0 0 18 34.28z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="noti"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="#0366d6">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="9"
+                      stroke="#0366d6"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </span>
               <!-- plus icon -->
-              <span class="white plus">&plus;</span>
-              <!-- dropdown option -->
-              <select name="select" id="add" class="wdth" disabled>
-              </select>
+              <span class="white sicon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="plus"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#fff"
+                    d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2z"
+                  />
+                </svg>
+                <!-- dropdown option -->
+                <select name="select" id="add" class="wdth" disabled></select>
+              </span>
+
               <!-- user avatar -->
-              <img
-                class="avaticon rounded"
-                alt="img"
-                id="profileImg"
-              />
+              <img class="avaticon rounded" alt="img" id="profileImg" />
               <!-- dropdown option -->
-              <select name="userselect" id="userselect" class="wdth" disabled> 
-              </select>
+              <select
+                name="userselect"
+                id="userselect"
+                class="wdth"
+                disabled
+              ></select>
             </div>
           </div>
         </nav>
       </header>
       <!-- header ends here -->
       <main class="main">
-        <div class="bord none-m" id="bord"></div>
+        <div class="bord none-m brd" id="bord"></div>
+        <div id="bords" class="brd sticky none none-m"></div>
         <div class="wrapper">
           <!-- main content starts -->
           <div class="flex container" id="repol">
             <!-- col a -->
             <!-- profile sect -->
             <div class="profiles aligncent pr5">
-              <div class="ctrl profiless none-m flex aligncent"><img
-                  class="avaticon rounded"
-                  alt="img"
-                  id="profileImg"
-                /> <!-- username -->
+              <div class="ctrl profiless none-m flex aligncent">
+                <img class="avaticon rounded" alt="img" id="profileImg" />
+                <!-- username -->
                 <span class="greytext" id="profileUName"></span>
               </div>
               <div class="flex flexm uim">
@@ -119,11 +207,31 @@
                     id="profileImg"
                   />
                   <div class="iconstatus none-m greytext">
-                    <i class="far fa-smile iconstat rounded"></i>
-                    <span class="iconstatuss">set status</span>
+                    <span class="sets rounded">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="iconstat"
+                        width="0.97em"
+                        height="1em"
+                        style="
+                          -ms-transform: rotate(360deg);
+                          -webkit-transform: rotate(360deg);
+                          transform: rotate(360deg);
+                        "
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 496 512"
+                      >
+                        <path
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248s248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200s-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1c-10.2 8.5-11.5 23.6-3.1 33.8c30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8c-10.1-8.4-25.3-7.1-33.8 3.1z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="iconstatuss">
+                      <small>set status</small>
+                    </span>
                   </div>
                 </div>
-  
+
                 <div class="details">
                   <!-- display name -->
                   <h2 id="profileName"></h2>
@@ -138,39 +246,95 @@
             </div>
             <!-- profile sect ends -->
             <!-- col b -->
-            <div class="container">
+            <div class="wrapperb">
               <!-- repo sect -->
               <div class="repoList">
                 <!-- options -->
-                <div class="opts" id="opts">
+                <div class="opts sticky" id="opts">
                   <div class="optns flex flexm aligncent" id="opts">
                     <div>
                       <a href="#">
-                        <i class="fas fa-book-open pr5 none-m"></i>Overview</a
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="none-m svgo"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          focusable="false"
+                          width="1em"
+                          height="1em"
+                          style="
+                            -ms-transform: rotate(360deg);
+                            -webkit-transform: rotate(360deg);
+                            transform: rotate(360deg);
+                          "
+                          preserveAspectRatio="xMidYMid meet"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021c.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196c.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"
+                            fill="#626262"
+                          />
+                        </svg>
+                        Overview</a
                       >
                     </div>
-                    <div  class="focus"> 
+                    <div class="focus">
                       <a href="#">
-                        <i class="fas fa-book pr5 none-m"></i
-                        >Repositories&nbsp;<small class="colgrey black" id="tcount"
-                          ></small
-                        ></a
+                        <svg
+                          class="none-m svgo"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          width="0.9em"
+                          height="0.9em"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"
+                          ></path>
+                        </svg>
+                        Repositories&nbsp;<small
+                          class="colgrey black"
+                          id="tcount"
+                        ></small
+                      ></a>
+                    </div>
+                    <div>
+                      <a href="#">
+                        <svg
+                          class="svgo none-m"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          width="0.8em"
+                          height="0.8em"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"
+                          ></path>
+                        </svg>
+                        Projects</a
                       >
                     </div>
                     <div>
-                      <a href="#"
-                        ><i class="far fa-chart-bar pr5 none-m"></i>Projects</a
-                      >
-                    </div>
-                    <div>
-                      <a href="#"
-                        ><i class="fas fa-cube pr5 none-m"></i>Packages</a
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="svgo none-m"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 256 256"
+                        >
+                          <path
+                            d="M228.167 71.769c-.019-.035-.033-.072-.053-.106l-.028-.044a13.991 13.991 0 0 0-5.222-5.142l-88-49.5a14.08 14.08 0 0 0-13.728 0l-88 49.5a13.993 13.993 0 0 0-5.233 5.161c-.011.02-.025.039-.037.06c-.018.032-.031.066-.049.1A13.982 13.982 0 0 0 26 78.677v98.643a14.018 14.018 0 0 0 7.136 12.202l88 49.5a13.945 13.945 0 0 0 6.036 1.734a6.024 6.024 0 0 0 .786.064h.054a5.98 5.98 0 0 0 .841-.066a13.948 13.948 0 0 0 6.01-1.732l88-49.5A14.018 14.018 0 0 0 230 177.321V78.68a13.986 13.986 0 0 0-1.833-6.91zM127.02 27.436a2.013 2.013 0 0 1 1.961 0l82.828 46.59l-82.888 47.09l-84.636-47.142zm-88 151.628A2.002 2.002 0 0 1 38 177.321V84.21l84.918 47.299l-.829 94.283zm177.961 0l-82.89 46.626l.828-94.18L218 84.31v93.011a2.002 2.002 0 0 1-1.02 1.743z"
+                          />
+                        </svg>
+                        Packages</a
                       >
                     </div>
                   </div>
                   <!-- <div class="bord none-"> </div> -->
                 </div>
-  
+
                 <div class="cons">
                   <!-- find a repo form -->
                   <form action="/" class="repoform br">
@@ -189,12 +353,12 @@
     </section>
     <section id="preload">
       <div class="container flex flexm aligncent height center pld">
-          <div class="loader " ></div>
-          <h3 class="pt5 greytext dhover">Just a minute :)</h3>
+        <div class="loader"></div>
+        <h3 class="pt5 greytext dhover">Just a minute :)</h3>
       </div>
-     </section>
-     <!-- scripts -->
-     <script type="module" src="../script/index.js"></script>
-     <script src="../script/nav.js"></script>
-   </body>
+    </section>
+    <!-- scripts -->
+    <script type="module" src="../script/index.js"></script>
+    <script src="../script/nav.js"></script>
+  </body>
 </html>

@@ -5,7 +5,9 @@ class toggle {
     this.collapse = document.getElementById("collapse");
     this.menunav = document.getElementById("listmenu");
     this.imgNav = document.querySelector(".ctrl");
+    this.bords = document.querySelector("#bords");
   }
+  // toggle navbar
   mobilemenu() {
     this.menuToggle.addEventListener("click", () => {
       return this.collapse.style.display === "none"
@@ -18,11 +20,16 @@ class toggle {
     });
   }
 
+  // scroll events
   onscrolls() {
     document.addEventListener("scroll", () => {
-      document.documentElement.scrollTop > 290
+      document.documentElement.scrollTop > 330
         ? (this.imgNav.style.visibility = "visible")
         : (this.imgNav.style.visibility = "hidden");
+
+      document.documentElement.scrollTop > 130
+        ? this.bords.classList.remove("none")
+        : this.bords.classList.add("none");
     });
   }
 }

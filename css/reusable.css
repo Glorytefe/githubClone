@@ -24,6 +24,10 @@
 .wrapper {
   padding: 0 2rem 0 3.2rem;
 }
+.wrapperb {
+  padding: 0 20px;
+  width: 100%;
+}
 .darkBlueCol {
   background-color: var(--navbkColor);
 }
@@ -91,7 +95,6 @@ a {
 }
 .sticky {
   position: sticky;
-  top: 0;
 }
 .loader {
   border: 16px solid var(--navBorderCol);
@@ -128,4 +131,18 @@ a {
 
 .dhover:hover {
   color: var(--rnameBlue);
+}
+
+.logo svg,
+.white svg {
+  fill: var(--whiteCol);
+  font-size: 28px;
+}
+
+.brd {
+  width: 100%;
+  left: 0;
+  background-color: var(--navBorderCol);
+  height: 1px;
+  z-index: 3;
 }

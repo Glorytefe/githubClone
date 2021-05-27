@@ -36,7 +36,6 @@ header {
 }
 
 .wdth {
-  width: 15px;
   border: none;
   background-color: inherit;
   color: var(--whiteCol);
@@ -46,18 +45,18 @@ header {
   color: rgb(204, 194, 194);
 }
 .notis .bels {
-  font-size: 16px;
+  fill: var(--whiteCol);
+  font-size: 20px;
 }
 .notis .noti {
   position: absolute;
-  margin-left: -0.67rem;
-  top: 0.3rem;
-  font-size: 10px;
-  color: var(--rnameBlue);
+  margin-left: -0.9rem;
+  top: 0;
+  font-size: 12px;
 }
 .noti-icon .plus {
-  font-size: 25px;
-  padding-left: 2px;
+  font-size: 20px;
+  /* padding-left: 2px; */
 }
 /* img avatar */
 .avaticon {
@@ -91,9 +90,11 @@ select {
   background-position: right 15px top 1em, right 10px top 1em;
   background-size: 5px 5px, 5px 5px;
   outline: none;
-  margin-left: -15px;
+  margin-left: -22px;
+
   cursor: pointer;
 }
+
 /* nav ends */
 
 /* main starts */
@@ -103,7 +104,6 @@ main {
 }
 /* options sect */
 .opts {
-  position: sticky !important;
   z-index: 2;
   background-color: var(--whiteCol);
   top: 0;
@@ -111,12 +111,10 @@ main {
 /* banner border */
 .bord {
   position: absolute;
-  top: 9.1rem;
-  width: 100%;
-  left: 0;
-  background-color: var(--navBorderCol);
-  height: 1px;
-  z-index: 3;
+  top: 8.1rem;
+}
+#bords {
+  top: 2.19rem;
 }
 .colgrey {
   background-color: var(--navBorderCol);
@@ -124,10 +122,15 @@ main {
   border-radius: 10px;
   margin: 0 5px;
 }
-.optns div{
+.optns div {
   padding: 8px;
   margin-right: 24px;
 }
+.svgo {
+  font-size: 18px;
+  stroke: rgb(153, 151, 151);
+}
+
 .optns > div > a {
   color: #24292e;
   font-weight: 500;
@@ -141,9 +144,6 @@ main {
   border-bottom: var(--optactiveBord);
 }
 
-.repoholder a:hover{
-  text-decoration: underline;
-} 
 /* profile */
 .profiless {
   position: sticky;
@@ -155,7 +155,7 @@ main {
   padding: 5px 0;
   visibility: hidden;
 }
-.profiless span{
+.profiless span {
   font-size: 12px;
   padding-left: 4px;
 }
@@ -173,7 +173,8 @@ main {
   font-size: 20px;
   font-weight: 400;
 }
-.uim, .pld {
+.uim,
+.pld {
   flex-direction: column;
 }
 
@@ -191,28 +192,35 @@ main {
   margin-bottom: -12%;
   position: absolute;
   left: 20rem;
-  padding: 0 5px;
   cursor: pointer;
 }
-.iconstat {
+.sets {
   border: 1px solid var(--navBorderCol);
   background-color: var(--whiteCol);
-  padding: 10px;
+  padding: 10px 5px 2px 5px;
+}
+.iconstat {
+  font-size: 20px;
+  fill: var(--rnameGrey);
+  stroke: var(--whiteCol);
 }
 .iconstatuss {
-  background-color: var(--whiteCol);
-  border-bottom: 1px solid var(--navBorderCol);
-  border-top: 1px solid var(--navBorderCol);
-  border-right: 1px solid var(--navBorderCol);
-  padding: 9px 5px 7px 1px;
+  position: relative;
+  padding: 10px 5px 2px 10px;
   margin-left: -15px;
-  margin-top: -3px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
   animation: ease-in 2s linear 2s;
   visibility: hidden;
+ 
 }
-.iconstatus i:hover ~ .iconstatuss{
+.iconstatuss small {
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  width: 70px;
+  background-color: var(--whiteCol);
+  z-index: 1;
+}
+.sets:hover ~ .iconstatuss {
   visibility: visible;
   animation: ease-out 2s linear 0.2s;
 }
@@ -250,7 +258,7 @@ main {
   font-size: 14px;
   font-weight: 200;
 }
-.repodetails p{
+.repodetails p {
   font-weight: 100;
   letter-spacing: 1;
 }
@@ -261,6 +269,9 @@ main {
   color: var(--rnameBlue);
   font-weight: 900;
   font-size: 20px;
+}
+.rname:hover {
+  text-decoration: underline !important;
 }
 #rDescrp {
   font-size: 15px;
@@ -274,7 +285,16 @@ main {
   padding: 7px 15px;
   cursor: pointer;
 }
-#contentsm{
+.star {
+  font-size: 18px;
+  text-align: center;
+  fill: grey;
+}
+.btns .star {
+  padding-right: 4px;
+  font-size: 20px;
+}
+#contentsm {
   display: none;
 }
 
@@ -318,7 +338,7 @@ main {
 
   .notis .noti {
     margin: 0;
-    right: 1.1rem;
+    right: 1.2rem;
     top: 1.3rem;
   }
 
@@ -331,7 +351,6 @@ main {
   .topm {
     border-top: 1px solid var(--navBorderCol);
   }
- 
 
   /* nav collapse */
   .collapse {
@@ -358,7 +377,7 @@ main {
     height: 4rem;
     margin: 0 auto;
   }
-  
+
   .profiles {
     padding: 10px 0 0 10px;
     font-size: 15px;
@@ -376,15 +395,13 @@ main {
     padding: 0 !important;
     border-bottom: 1px solid var(--navBorderCol);
     font-size: 14px;
-
   }
-  .optns div{
-   margin-right: 15px;
-
+  .optns div {
+    margin-right: 15px;
   }
-.details{
-  padding: 0 0 10px 10px;
-}
+  .details {
+    padding: 0 0 10px 10px;
+  }
 
   .details h3 {
     padding: 10px 0;
@@ -404,7 +421,11 @@ main {
   }
   .btns {
     width: 60px;
-    padding: 7px 0;
+    padding: 7px;
+    font-size: 12px;
+  }
+  .star {
+    font-size: 14px;
   }
   .descr {
     padding: 5px 10px;
@@ -439,11 +460,11 @@ main {
   nav {
     font-size: 15px;
   }
-  .optns{
+  .optns {
     width: 100%;
   }
-  .optns div{
-    padding: 4px 0;
+  .optns div {
+    padding: 8px 0;
     margin-right: 18px;
   }
 }
