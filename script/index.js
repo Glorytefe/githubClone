@@ -15,7 +15,7 @@ const queryData = {
                    login
                    bio
                    avatarUrl
-                   repositories(first: 20, orderBy: {field: PUSHED_AT, direction: DESC}) {
+                   repositories(first: 20, privacy:PUBLIC, orderBy: {field: PUSHED_AT, direction: DESC}) {
                     totalCount
                      nodes {
                        name
@@ -27,7 +27,6 @@ const queryData = {
                        description
                        forkCount
                        stargazerCount
-                       isPrivate
                        pushedAt
                      }
                    }
@@ -43,6 +42,7 @@ const header = {
 
 // get data class
 class getData {
+  // fetch data
   fetchData() {
     if (userName) {
       fetch(url, {
@@ -52,37 +52,43 @@ class getData {
       })
         .then((response) => response.json())
         .then((result) => {
-          const data = result.data.user;
-          // profile content
-          profile = {
-            name: data.name,
-            img: data.avatarUrl,
-            bio: data.bio,
-            username: data.login,
-            total: data.repositories.totalCount,
-          };
-          // All repo and details
-          repoDetails = data.repositories.nodes;
+          this.myData(result)
         })
-        .then(() => {
-          const displayUi = new UI();
-          displayUi.displayProf();
-        });
     }
   }
+  // organize data
+   myData (result){
+    const data = (result.data.user === null)?
+    window.location.href = "../component/error.html" : (result.data.user);
+    // profile content
+    profile = {
+      name: data.name,
+      img: data.avatarUrl,
+      bio: data.bio,
+      username: data.login,
+      total: data.repositories.totalCount,
+    };
+    // All repo and details
+    repoDetails = data.repositories.nodes;
+    const displayUi = new UI();
+    displayUi.displayProf();
+   }
 }
 
 class UI {
   constructor() {
     this.pImg = document.querySelectorAll("[id = 'profileImg']");
     this.pName = document.getElementById("profileName");
-    this.pUName = document.getElementById("profileUName");
-    this.pUNameMo = document.getElementById("profileUNama");
+    this.pUName = document.querySelectorAll("[id = 'profileUName']");
     this.pDescr = document.getElementById("descr");
     this.aElem = document.getElementById("rname");
     this.rDescription = document.getElementById("rDescrp");
     this.rCounter = document.getElementById("tcount");
     this.rContainer = document.getElementById("repoCar");
+    this.preload = document.getElementById("preload");
+    this.mycont= document.getElementById("contentsm");
+
+
     this.allMonths = [
       "jan",
       "feb",
@@ -100,16 +106,17 @@ class UI {
   }
   // display profile
   displayProf() {
+    this.preload.style.display = "none";
+    this.mycont.style.display = "block";
     this.pImg.forEach((img) => {
       img.setAttribute("src", profile.img);
     });
-    this.pUName.innerText = profile.username;
-    this.pUNameMo.innerText = profile.username;
+    this.pUName.forEach((user) =>{
+      user.innerText = profile.username;
+    })
     this.pDescr.innerText = profile.bio;
     this.rCounter.innerText = profile.total;
-    if (this.pName !== null) {
-      this.pName.innerText = profile.name;
-    }
+    (this.pName !== null) ?  this.pName.innerText = profile.name : this.pName.innerText = ""
     // display repos list
     this.displayRepo();
   }
@@ -170,6 +177,9 @@ class UI {
         );
       });
     }
+    else{
+      alert('You have no repository')
+    }
   }
   // repo UI Builder
   repoUI(repoName, repoDescr, repolang, repoStar, repoForks, updated) {
@@ -201,11 +211,11 @@ class UI {
   // Date updated
   getNewDateFormat(updated) {
     const newDate = new Date(updated);
-    // let date = newDate.getDate();
+    let date = newDate.getDate();
     let month = this.allMonths[newDate.getMonth()];
     let year = newDate.getFullYear();
-
-    return `last updated ${month}, ${year}`;
+    date = (date < 10) ? `0${date}` :`${date}`
+    return `updated on ${date} ${month}, ${year}`;
   }
 }
 // on load

@@ -4,12 +4,10 @@ class toggle {
     this.menuToggle = document.getElementById("barmenu");
     this.collapse = document.getElementById("collapse");
     this.menunav = document.getElementById("listmenu");
-    this.repol = document.getElementById("repol");
-    this.bord = document.getElementById("bord");
-    this.optContainer = document.getElementById("opts");
+    this.imgNav = document.querySelector(".ctrl");
   }
   mobilemenu() {
-    this.menuToggle.addEventListener("click", (e) => {
+    this.menuToggle.addEventListener("click", () => {
       return this.collapse.style.display === "none"
         ? (this.collapse.style.display = "block")
         : (this.collapse.style.display = "none");
@@ -22,17 +20,9 @@ class toggle {
 
   onscrolls() {
     document.addEventListener("scroll", () => {
-      if (document.documentElement.scrollTop > 110) {
-        this.bord.style.position = "sticky";
-        this.bord.style.top = "2.2rem";
-        this.bord.style.zIndex = "2";
-        this.optContainer.style.paddingTop = "3px";
-        this.optContainer.style.paddingBottom = "12px";
-      } else {
-        this.bord.style.position = "absolute";
-        this.bord.style.top = "9rem";
-        this.optContainer.style.padding = "0";
-      }
+      document.documentElement.scrollTop > 290
+        ? (this.imgNav.style.visibility = "visible")
+        : (this.imgNav.style.visibility = "hidden");
     });
   }
 }
