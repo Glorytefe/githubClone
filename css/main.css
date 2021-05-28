@@ -127,6 +127,10 @@ main {
   padding: 8px;
   margin-right: 24px;
 }
+.optns div span {
+  vertical-align: middle;
+  align-items: center;
+}
 .svgo {
   font-size: 18px;
   stroke: rgb(153, 151, 151);
