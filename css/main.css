@@ -59,6 +59,10 @@ header {
   font-size: 20px;
   /* padding-left: 2px; */
 }
+.sicon{
+vertical-align: middle;
+  align-items: center;
+}
 /* img avatar */
 .avaticon {
   width: 25px;
