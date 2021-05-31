@@ -119,7 +119,7 @@ main {
   top: 8.29rem;
 }
 #bords {
-  top: 2.25rem;
+  top: 2.45rem;
 }
 .colgrey {
   background-color: var(--navBorderCol);
@@ -482,4 +482,7 @@ fill: var(--rnameBlue);
     padding: 8px 0;
     margin-right: 18px;
   }
+#bords {
+  top: 2.4rem;
+}
 }
